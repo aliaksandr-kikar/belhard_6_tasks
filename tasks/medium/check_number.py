@@ -5,3 +5,16 @@ False, если нет
 
 Нельзя пользоваться операцией возведения в степень
 """
+
+
+def check_number(n) -> bool:
+    if n == 1:
+        return True
+    elif 1 < n < 2:
+        return False
+    return check_number(n / 2)
+
+
+print(check_number(5))
+print(check_number(1))
+print(check_number(6))
